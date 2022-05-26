@@ -1,0 +1,25 @@
+{
+  "name": "nodejstutorial",
+  "version": "1.0.0",
+  "description": "Toturial Videos",
+  "main": "server.js",
+  "scripts": {
+    "test": "NPM test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firdousalam/NodejsTutorial.git"
+  },
+  "keywords": [
+    "NPM"
+  ],
+  "author": "https://www.youtube.com/channel/UCDRBrrGYsSaO7fUU-pi5Arw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/firdousalam/NodejsTutorial/issues"
+  },
+  "homepage": "https://github.com/firdousalam/NodejsTutorial#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
