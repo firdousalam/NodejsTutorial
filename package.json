@@ -4,7 +4,9 @@
   "description": "Toturial Videos",
   "main": "server.js",
   "scripts": {
-    "test": "NPM test"
+    "test": "npm test",
+    "build" : "npm run build,",
+    "start" : "node server.js"
   },
   "repository": {
     "type": "git",
