@@ -1,9 +1,14 @@
-const express = require('express')
+const express = require('express');
+var url = require("url");
 const app = express()
 const port = 3000
 console.log("mmmmmmmmmmm");
 app.get('/', (req, res) => {
-  res.send('Hello World! '+req.protocol + '://' + req.get('host') + req.originalUrl);
+  var pathname = url.parse(request.url).pathname;
+  console.log("Request for " + pathname + " received.");
+  console.log(req.url);
+
+  res.send('Hello World! '+url.parse(request.url));
 })
 
 app.listen(port, () => {
