@@ -1,15 +1,13 @@
 const express = require('express');
-var url = require("url");
 const app = express()
 const port = 3000
-console.log("mmmmmmmmmmm");
+console.log("new deployment");
 app.get('/', (req, res) => {
-  console.log(req);
-  var pathname = url.parse(req.url).pathname;
-  console.log("Request for " + pathname + " received.");
-  console.log(req.url);
-
-  res.send('Hello World! '+url.parse(request.url));
+  var host = req.get('host');
+  var origin = req.get('origin');
+  var Hhost = req.headers.host;
+var Horigin = req.headers.origin;
+  res.send('Hello World! '+host+" origin "+origin+" hHost"+Hhost+" hOrigin "+Horigin);
 })
 
 app.listen(port, () => {
