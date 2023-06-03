@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-//const userController = require('../controller/userController');
+const userController = require('../controller/userController');
 
 // middleware that is specific to this router
 router.use((req, res, next) => {
@@ -9,17 +9,16 @@ router.use((req, res, next) => {
     // anythink
     next()
 })
-
-// define the home page route
-router.get('/userDetails/:userName', (req, res) => {
-   // res.send("hello world");
-  
+router.post("/addUser",function(req,res){
+    userController.saveUser(req,res);
+})
+router.get("/getUser",function(req,res){
     userController.getUser(req,res);
 })
-// define the home page route
-router.get('/userDetails/userName', (req, res) => {
-    // res.send("hello world");
-   
-     userController.getUser(req,res);
- })
+router.get('/user/:listId',function(req,res){
+    userController.getUserById(req,res);
+})
+router.delete('/deleteUser/:listId',function(req,res){
+    userController.deleteUserById(req,res);
+})
 module.exports = router;

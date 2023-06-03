@@ -6,10 +6,10 @@ exports.changeToUpperCasei=(input)=>{
 
 module.exports = {
     changeToUpperCase: function (input) {
-        return "HI "+input.toUpperCase();
+        return input.toUpperCase();
 
     },
-    bar: function () {
-      // whatever
+    changeToLowerCase: function (input) {
+      return input.toLowerCase();
     }
   };
