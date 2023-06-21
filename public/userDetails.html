@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello world!</title>
+  </head>
+  <body>
+    <h1>This is MY User List</h1>
+    <ul style="font-size:50px">
+      {{#each users}}
+      <li>Name: {{this.name}}</li>
+      <li style="color:blue">Age: {{this.age}}</li>
+      <br />
+      {{/each}}
+    </ul>
+  </body>
+</html>
